@@ -261,11 +261,9 @@
          in gralloc protected buffers.  For this to be true, there must exist
          a protected hardware path for surface flinger to composite and send
          protected buffers to the wifi display video encoder.
-
          If this flag is false, we advise applications not to use protected
          buffers (if possible) when presenting content to a wifi display because
          the content may be blanked.
-
          This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
          flag is set for wifi displays.
     -->
@@ -406,6 +404,7 @@
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
     <bool name="config_dynamic_bind_ims">true</bool>
 
+
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -421,4 +420,18 @@
     <!-- Button brightness support -->
     <bool name="config_button_brightness_support">true</bool>
 
+   <!-- Control the behavior when the user triple presses the power button.
+        0 - Nothing
+        1 - Toggle theater mode setting
+        2 - Brightness boost
+    -->
+   <integer name="config_triplePressOnPowerBehavior">2</integer>
+
+   <!-- Override the default detection behavior for the framework method
+        android.view.ViewConfiguration#hasPermanentMenuKey().
+        Valid settings are:
+        0 - No change. Use the default autodetection behavior.
+        1 - The device DOES have a permanent menu key; ignore autodetection.
+        2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
+   <integer name="config_overrideHasPermanentMenuKey">2</integer>
 </resources>
