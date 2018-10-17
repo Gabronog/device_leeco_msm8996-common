@@ -18,7 +18,7 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosip
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -166,6 +166,11 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.1 \
     vendor.display.config@1.1_vendor
 
+#KCAL
+PRODUCT_PACKAGES += \
+    kcal
+
+
 # Doze mode
 PRODUCT_PACKAGES += \
     Doze
@@ -205,7 +210,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
     android.hardware.health@1.0-convert \
-    android.hardware.health@1.0-service
+    android.hardware.health@1.0-service \
+    chargeonlymode
 
 # HIDL
 PRODUCT_PACKAGES += \
